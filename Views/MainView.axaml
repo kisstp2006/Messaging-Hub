@@ -1,0 +1,202 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Messaging_Hub.ViewModels"
+             xmlns:webview="clr-namespace:WebViewControl;assembly=WebViewControl.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Messaging_Hub.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<Design.DataContext>
+		<vm:MainViewModel />
+	</Design.DataContext>
+
+	<Grid>
+		<!-- Custom Title Bar -->
+		<Grid x:Name="TitleBar" Height="30" Background="#1a1b1e" VerticalAlignment="Top" ColumnDefinitions="*,Auto,Auto,Auto">
+			<TextBlock Text="Messaging Hub" Foreground="White" VerticalAlignment="Center" Margin="10,0"/>
+			<Button Grid.Column="1" Name="MinimizeWindow_btn" Background="Transparent" BorderThickness="0" Margin="5,0" Click="Button_Click_2">
+				<PathIcon Data="{StaticResource minimize_icon}" Foreground="White" Width="16" Height="16"/>
+			</Button>
+			<Button Grid.Column="2" Name="MaximizeWindow_Btn" Background="Transparent" BorderThickness="0" Margin="5,0" Click="Button_Click_1">
+				<PathIcon Name="MaximizePathIcon" Data="{StaticResource maximize_icon1}" Foreground="White" Width="16" Height="16"/>
+			</Button>
+			<Button Grid.Column="3" Name="Close_Btn" Background="Transparent" BorderThickness="0" Margin="5,0" Click="Button_Click">
+				<PathIcon Data="{StaticResource close_icon}" Foreground="White" Width="16" Height="16"/>
+			</Button>
+		</Grid>
+
+		<!-- Main Layout -->
+		<Grid Margin="0,30,0,0" ColumnDefinitions="250,*">
+			<!-- Left Sidebar -->
+			<Grid Grid.Column="0" RowDefinitions="Auto,Auto,*,Auto" Background="#0f1012">
+				<!-- App Title -->
+				<Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="20,15">
+					<TextBlock Text="Messaging Hub"
+							   Foreground="White"
+							   FontWeight="SemiBold"
+							   FontSize="20"/>
+					<Button Grid.Column="1"
+							Background="Transparent"
+							BorderThickness="0">
+						<PathIcon Data="{StaticResource light_regular}"
+								  Width="20" Height="20"
+								  Foreground="White"/>
+					</Button>
+				</Grid>
+
+				<!-- Services Header -->
+				<TextBlock Grid.Row="1"
+						   Text="AVALIABLE MESSAGING SERVICES"
+						   Margin="10,10"
+						   Foreground="#666870"
+						   FontSize="12"/>
+
+				<!-- Services List -->
+				<ScrollViewer Grid.Row="2">
+					<StackPanel Margin="10,0">
+						<!-- Discord -->
+						<Button Classes="serviceButton" 
+							Name="Discord_BtnUI"
+							Background="#1e1f25"
+							Click="Discord_Btn">
+							<Grid ColumnDefinitions="Auto,*">
+								<Ellipse Width="40" Height="40"
+										 Fill="#5865f2"/>
+								<PathIcon Data="{StaticResource discord}"
+										  Width="20" Height="20"
+										  Foreground="White"/>
+								<!-- Changed Fill to Foreground -->
+								<StackPanel Grid.Column="1"
+											Margin="10,0,0,0"
+											VerticalAlignment="Center">
+									<TextBlock Text="Discord"
+											   Foreground="White"/>
+									<TextBlock Text="Connect with your Discord communities and friends"
+											   Foreground="#666870"
+											   FontSize="12"
+											   TextWrapping="Wrap"/>
+								</StackPanel>
+							</Grid>
+						</Button>
+
+
+						<!-- Messenger -->
+						<Button Classes="serviceButton" Click="Messenger_Btn">
+							<Grid ColumnDefinitions="Auto,*">
+								<Ellipse Width="40" Height="40"
+										 Fill="#00B2FF"/>
+								<!-- Ikon rétegezése -->
+								<Grid Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+									<PathIcon Data="{StaticResource MessengerOut}"
+											  Foreground="White"
+											  />
+									<PathIcon Data="{StaticResource MessengerInn}"
+											  Foreground="Black"
+											  />
+								</Grid>
+								<StackPanel Grid.Column="1"
+											Margin="10,0,0,0"
+											VerticalAlignment="Center">
+									<TextBlock Text="Messenger"
+											   Foreground="White"/>
+									<TextBlock Text="Chat with your Facebook friends"
+											   Foreground="#666870"
+											   FontSize="12"/>
+								</StackPanel>
+							</Grid>
+						</Button>
+
+
+						<!-- WhatsApp -->
+						<Button Classes="serviceButton" Click="WhatsApp_Btn">
+							<Grid ColumnDefinitions="Auto,*">
+								<Ellipse Width="40" Height="40"
+										 Fill="#25D366"/>
+								<StackPanel Grid.Column="1"
+											Margin="10,0,0,0"
+											VerticalAlignment="Center">
+									<TextBlock Text="WhatsApp"
+											   Foreground="White"/>
+									<TextBlock Text="Message your contacts on WhatsApp"
+											   Foreground="#666870"
+											   FontSize="12"/>
+								</StackPanel>
+							</Grid>
+						</Button>
+
+						<!-- Telegram -->
+						<Button Classes="serviceButton" Click="Telegram_Btn">
+							<Grid ColumnDefinitions="Auto,*">
+								<Ellipse Width="40" Height="40"
+										 Fill="#229ED9"/>
+								<StackPanel Grid.Column="1"
+											Margin="10,0,0,0"
+											VerticalAlignment="Center">
+									<TextBlock Text="Telegram"
+											   Foreground="White"/>
+									<TextBlock Text="Fast, secure messaging on Telegram"
+											   Foreground="#666870"
+											   FontSize="12"/>
+								</StackPanel>
+							</Grid>
+						</Button>
+
+					</StackPanel>
+				</ScrollViewer>
+
+			</Grid>
+
+			<!-- Main Content Area -->
+			<Grid Grid.Column="1">
+				<!-- Header -->
+				<Grid Height="60"
+					  VerticalAlignment="Top"
+					  Background="#1a1b1e"
+					  ColumnDefinitions="*,Auto">
+					<TextBlock Text="Discord"
+							   Foreground="#5865f2"
+							   FontSize="20"
+							   FontWeight="SemiBold"
+							   VerticalAlignment="Center"
+							   Margin="20,0"/>
+					<StackPanel Grid.Column="1"
+								Orientation="Horizontal"
+								Spacing="10"
+								Margin="20,0">
+						<Button Background="Transparent"
+								BorderThickness="0">
+							<PathIcon Data="{StaticResource arrow_sync_regular}"
+									  Foreground="White"/>
+						</Button>
+						<Button Background="Transparent"
+								BorderThickness="0">
+							<PathIcon Data="{StaticResource arrow_maximize_regular}"
+									  Foreground="White"/>
+						</Button>
+					</StackPanel>
+				</Grid>
+
+				<!-- Content -->
+				<Grid Margin="0,60,0,0" Background="#26272b">
+					<webview:WebView x:Name="DiscordWebw" Focusable="True" Address="https://discord.com/channels/@me" IsVisible="True" IsEnabled="True" />
+					<webview:WebView x:Name="MessengerWebw" Focusable="True" Address="https://messenger.com" IsVisible="False" IsEnabled="False"/>
+					<webview:WebView x:Name="WhatsAppWebw" Focusable="True" Address="https://web.whatsapp.com/" IsVisible="False" IsEnabled="False"/>
+					<webview:WebView x:Name="TelegramWebw" Focusable="True" Address="https://web.telegram.org/a/" IsVisible="False" IsEnabled="False"/>
+					
+				</Grid>
+			</Grid>
+		</Grid>
+	</Grid>
+
+	<UserControl.Styles>
+		<Style Selector="Button.serviceButton">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="Padding" Value="10"/>
+			<Setter Property="Margin" Value="0,5"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="CornerRadius" Value="8"/>
+		</Style>
+	</UserControl.Styles>
+</UserControl>

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging Hub", "Messaging Hub.csproj", "{A0245514-19A0-81CD-8406-37C7271BCB26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging Hub.Android", "..\Messaging Hub.Android\Messaging Hub.Android.csproj", "{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging Hub.Browser", "..\Messaging Hub.Browser\Messaging Hub.Browser.csproj", "{E198684F-63DC-973F-6CE7-160FD46348ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging Hub.Desktop", "..\Messaging Hub.Desktop\Messaging Hub.Desktop.csproj", "{93D1D291-E72A-74C3-AC0A-8701308A64BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging Hub.iOS", "..\Messaging Hub.iOS\Messaging Hub.iOS.csproj", "{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0245514-19A0-81CD-8406-37C7271BCB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0245514-19A0-81CD-8406-37C7271BCB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0245514-19A0-81CD-8406-37C7271BCB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0245514-19A0-81CD-8406-37C7271BCB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C7E609-5F99-F559-0BC8-C71DF2C2F9D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E198684F-63DC-973F-6CE7-160FD46348ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E198684F-63DC-973F-6CE7-160FD46348ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E198684F-63DC-973F-6CE7-160FD46348ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E198684F-63DC-973F-6CE7-160FD46348ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D1D291-E72A-74C3-AC0A-8701308A64BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D1D291-E72A-74C3-AC0A-8701308A64BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D1D291-E72A-74C3-AC0A-8701308A64BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D1D291-E72A-74C3-AC0A-8701308A64BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB1F3F9-D761-EDCD-5C5B-17B119ABBEB4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0800F467-3227-47D8-95E3-2ABD9B6B22D2}
+	EndGlobalSection
+EndGlobal
